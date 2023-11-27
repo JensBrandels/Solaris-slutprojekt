@@ -213,13 +213,11 @@ main{
 }
 /**************************/
 section{
-    display: none;
     margin-top: -70.3rem;
     position: absolute;
     width: 100%;
     height: 70.3rem; 
     background: linear-gradient(90deg, #0C164D 0%, #190B22 100%);
-    /* display: flex; */
 }
 
 .section__planet{

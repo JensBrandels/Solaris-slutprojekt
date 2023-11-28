@@ -78,9 +78,13 @@ async function printData(index){
 
     //get all moons and write them out
     const moons = data[index].moons
+    //get the unique ones (there are dublettes for some reason)
+    const uniqueMoons = moons.filter((moon, index) => {
+        return moons.indexOf(moon) === index;
+    })
     const allMoons = document.getElementById('moons')
-    allMoons.innerText = moons.join(', ') //here i add a , after every moon it finds inside the array
-    if (moons.length === 0) {
+    allMoons.innerText = uniqueMoons.join(', ') //here i add a , after every moon it finds inside the array
+    if (uniqueMoons.length === 0) {
         allMoons.innerText = `This one has no moons :(`
     }
 }

@@ -21,6 +21,30 @@ const jupiterPlanet = document.getElementById('jupiter')
 const saturnPlanet = document.getElementById('saturn')
 const uranusPlanet = document.getElementById('uranus')
 const neptunePlanet = document.getElementById('neptune')
+/////////////////////////////////////////API FETCHING///////////////////////////////////////
+//Function to get API key and fetch data 
+async function getData() {
+    
+    //fetch API key
+    let keyResponse = await fetch('https://n5n3eiyjb0.execute-api.eu-north-1.amazonaws.com/keys', {
+        method: 'POST'
+    })
+    //make it into json
+    let data = await keyResponse.json();
+    let apiKey = data.key; //here is where we save the key in apiKey variable
+
+    //get info from the bodies API by using our key
+    let response = await fetch('https://n5n3eiyjb0.execute-api.eu-north-1.amazonaws.com/bodies', {
+    method: 'GET',
+    headers: {'x-zocom': apiKey} // <----this is where we use the apiKey
+    })
+
+    let planetData = await response.json()
+
+    console.log(planetData);
+}
+
+getData() //start the function and make it run instantly
 
 //************************hide infosections*********************** */
 

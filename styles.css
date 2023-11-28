@@ -64,8 +64,9 @@ main{
 }
 
 .main__sun:hover{
-    width: 81rem;
-    height: 81rem; 
+    box-shadow: 0px 2px 51px -1px rgba(255,255,255,1);
+    -webkit-box-shadow: 0px 2px 51px -1px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 2px 51px -1px rgba(255,255,255,1);
     transition-duration: .5s;
     
 }
@@ -160,39 +161,45 @@ main{
 
 /*************hover effects on planets***********/
 
-.main__mercury:hover{
-    width: 1.7rem;
-    height: 1.7rem; 
+.main__mercury:hover{ 
+    box-shadow: 0px 2px 24px 4px rgba(255,255,255,1);
+-webkit-box-shadow: 0px 2px 24px 4px rgba(255,255,255,1);
+-moz-box-shadow: 0px 2px 24px 4px rgba(255,255,255,1);
     transition-duration: .5s;
 }
 
 .main__venus:hover{
-    width: 2.5rem;
-    height: 2.5rem; 
+    box-shadow: 0px 2px 51px -1px rgba(255,255,255,1);
+-webkit-box-shadow: 0px 2px 51px -1px rgba(255,255,255,1);
+-moz-box-shadow: 0px 2px 51px -1px rgba(255,255,255,1);
     transition-duration: .5s;
 }
 
 .main__earth:hover{
-    width: 2.6rem;
-    height: 2.6rem; 
+    box-shadow: 0px 2px 51px -1px rgba(255,255,255,1);
+    -webkit-box-shadow: 0px 2px 51px -1px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 2px 51px -1px rgba(255,255,255,1); 
     transition-duration: .5s;
 }
 
 .main__mars:hover{
-    width: 1.7rem;
-    height: 1.7rem; 
+    box-shadow: 0px 2px 24px 4px rgba(255,255,255,1);
+-webkit-box-shadow: 0px 2px 24px 4px rgba(255,255,255,1);
+-moz-box-shadow: 0px 2px 24px 4px rgba(255,255,255,1);
     transition-duration: .5s;
 }
 
 .main__jupiter:hover{
-    width: 12.5rem;
-    height: 12.5rem;
+    box-shadow: 0px 2px 51px -1px rgba(255,255,255,1);
+    -webkit-box-shadow: 0px 2px 51px -1px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 2px 51px -1px rgba(255,255,255,1);
     transition-duration: .5s;  
 }
 
 .main__saturn:hover{
-    width: 10rem;
-    height: 10rem;  
+    box-shadow: 0px 2px 51px -1px rgba(255,255,255,1);
+    -webkit-box-shadow: 0px 2px 51px -1px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 2px 51px -1px rgba(255,255,255,1);
     transition-duration: .5s;
 }
 .main__saturn:hover .planetRing{
@@ -201,14 +208,16 @@ main{
 }
 
 .main__uranus:hover{
-    width: 5rem;
-    height: 5rem;  
+    box-shadow: 0px 2px 51px -1px rgba(255,255,255,1);
+    -webkit-box-shadow: 0px 2px 51px -1px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 2px 51px -1px rgba(255,255,255,1);
     transition-duration: .5s;
 }
 
 .main__neptune:hover{
-    width: 5rem;
-    height: 5rem;  
+    box-shadow: 0px 2px 51px -1px rgba(255,255,255,1);
+    -webkit-box-shadow: 0px 2px 51px -1px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 2px 51px -1px rgba(255,255,255,1); 
     transition-duration: .5s;
 }
 /**************************hidden section************************/

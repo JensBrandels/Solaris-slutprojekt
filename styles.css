@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&family=Secular+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 
 *{
     margin: 0;
@@ -211,7 +211,7 @@ main{
     height: 5rem;  
     transition-duration: .5s;
 }
-/**************************/
+/**************************hidden section************************/
 section{
     margin-top: -70.3rem;
     position: absolute;
@@ -225,22 +225,10 @@ section{
     height: 79.875rem;
     border-radius: 50%;
     background: #428ED4;
+    box-shadow: 0 0 0 2rem rgba(66, 142, 212, 0.1),2rem 0 0 2rem rgba(66, 142, 212, 0.06);
     margin-top: -11rem;
     margin-left: -70rem;
     position: relative;
-}
-
-.section__planet::before{
-    content: "";
-    position: absolute;
-    width: calc(100% + 4rem);
-    height: calc(100% + 4rem);
-    border-radius: 50%;
-    border: 2rem solid rgba(66, 142, 212, 0.1);
-    box-shadow: 0 0 0 2rem rgba(66, 142, 212, 0.06);
-    box-sizing: border-box;
-    margin-top: -2rem;
-    margin-left: -2.1rem;
 }
 
 .section__container{
@@ -280,6 +268,7 @@ section{
 }
 
 section p{
+    color: #FFF;
     font-family: Roboto Condensed;
     font-size: 1.125rem;
     font-style: normal;
@@ -298,6 +287,10 @@ section p{
 
 .section__infoContainer article:nth-child(2){
     margin-right: 13rem;
+}
+
+.section__moons{
+    width: 60%;
 }
 
 .section__moontitles{

@@ -8,9 +8,7 @@
 //steg 8 kasta in API fetch funktionen på varje knapp
 //steg 9 skapa en reset function som resettar alla keyvalues vi skriver ut i funktionerna
 
-//Global variables
-
-//DOM variables
+//DOM Button variables
 const getBack = document.getElementById('clickBack')
 const theSun = document.getElementById('sun')
 const mercuryPlanet = document.getElementById('mercury')
@@ -21,7 +19,10 @@ const jupiterPlanet = document.getElementById('jupiter')
 const saturnPlanet = document.getElementById('saturn')
 const uranusPlanet = document.getElementById('uranus')
 const neptunePlanet = document.getElementById('neptune')
+const clickedPlanet = document.getElementById('clickPlanet')
+
 /////////////////////////////////////////API FETCHING///////////////////////////////////////
+
 //Function to get API key and fetch data 
 async function getData() {
     
@@ -41,11 +42,48 @@ async function getData() {
 
     let planetData = await response.json()
 
-    console.log(planetData);
+    return planetData.bodies
 }
 
 getData() //start the function and make it run instantly
 
+////////////////////////////////////PRINT OUT DATA FUNCTIONS///////////////////////////////////
+
+//this function writes out all the planets info one by one
+async function printData(index){
+
+    let data = await getData()
+
+    //Dom Variables
+    const planetTitle = document.getElementById('planetName')
+    planetTitle.innerText = data[index].name.toUpperCase()
+
+    const planetLatinName = document.getElementById('planetLatinName')
+    planetLatinName.innerText = data[index].latinName.toUpperCase()
+
+    const planetDesc = document.getElementById('planetDescription')
+    planetDesc.innerText = data[index].desc
+
+    const planetSize = document.getElementById('circumference')
+    planetSize.innerText = `${data[index].circumference.toLocaleString()} km`
+
+    const planetMaxTemp = document.getElementById('maxTemp')
+    planetMaxTemp.innerText = `${data[index].temp.day}°C`
+
+    const planetMinTemp = document.getElementById('minTemp')
+    planetMinTemp.innerText = `${data[index].temp.night}°C`
+
+    const sunDistance = document.getElementById('distanceFromSun')
+    sunDistance.innerText = `${data[index].distance.toLocaleString()} km`
+
+    //get all moons and write them out
+    const moons = data[index].moons
+    const allMoons = document.getElementById('moons')
+    allMoons.innerText = moons.join(', ') //here i add a , after every moon it finds inside the array
+    if (moons.length === 0) {
+        allMoons.innerText = `This one has no moons :(`
+    }
+}
 //************************hide infosections*********************** */
 
 //Hide section with transition instantly at start
@@ -84,37 +122,64 @@ getBack.addEventListener('click', () => {
 
 theSun.addEventListener('click', () => {
     showSection()
+    clickedPlanet.style.background = '#FFD029'
+    clickedPlanet.style.boxShadow = '0 0 0 2rem rgba(255,208,41, 0.1), 2rem 0 0 2rem rgba(255,208,41, 0.06)'
+    printData(0)
 })
 
 mercuryPlanet.addEventListener('click', () => {
     showSection()
+    clickedPlanet.style.background = '#888'
+    clickedPlanet.style.boxShadow = '0 0 0 2rem rgba(136,136,136, 0.1), 2rem 0 0 2rem rgba(136,136,136, 0.06)'
+    printData(1)
 })
 
 venusPlanet.addEventListener('click', () => {
     showSection()
+    clickedPlanet.style.background = '#E7CDCD'
+    clickedPlanet.style.boxShadow = '0 0 0 2rem rgba(231,205,205, 0.1), 2rem 0 0 2rem rgba(231,205,205, 0.06)'
+    printData(2)
 })
 
 earthPlanet.addEventListener('click', () => {
     showSection()
+    clickedPlanet.style.background = '#428ED4'
+    clickedPlanet.style.boxShadow = '0 0 0 2rem rgba(66,142,212, 0.1), 2rem 0 0 2rem rgba(66,142,212, 0.06)'
+    printData(3)
 })
 
 marsPlanet.addEventListener('click', () => {
     showSection()
+    clickedPlanet.style.background = '#EF5F5F'
+    clickedPlanet.style.boxShadow = '0 0 0 2rem rgba(239,95,95, 0.1), 2rem 0 0 2rem rgba(239,95,95, 0.06)'
+    printData(4)
 })
 
 jupiterPlanet.addEventListener('click', () => {
     showSection()
+    clickedPlanet.style.background = '#E29468'
+    clickedPlanet.style.boxShadow = '0 0 0 2rem rgba(226,148,104, 0.1), 2rem 0 0 2rem rgba(226,148,104, 0.06)'
+    printData(5)
 })
 
 saturnPlanet.addEventListener('click', () => {
     showSection()
+    clickedPlanet.style.background = '#C7AA72'
+    clickedPlanet.style.boxShadow = '0 0 0 2rem rgba(199,170,114, 0.1), 2rem 0 0 2rem rgba(199,170,114, 0.06)'
+    printData(6)
 })
 
 uranusPlanet.addEventListener('click', () => {
     showSection()
+    clickedPlanet.style.background = '#C9D4F1'
+    clickedPlanet.style.boxShadow = '0 0 0 2rem rgba(201,212,241, 0.1), 2rem 0 0 2rem rgba(201,212,241, 0.06)'
+    printData(7)
 })
 
 neptunePlanet.addEventListener('click', () => {
     showSection()
+    clickedPlanet.style.background = '#7A91A7'
+    clickedPlanet.style.boxShadow = '0 0 0 2rem rgba(122,145,167, 0.1), 2rem 0 0 2rem rgba(122,145,167, 0.06)'
+    printData(8)
 })
 

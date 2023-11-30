@@ -8,8 +8,10 @@
 }
 
 body{
+    margin: 0 auto;
+    overflow: hidden;
     width: 100%;
-    height: 56.25rem; 
+    /* height: 56.25rem;  */
     background: linear-gradient(90deg, #0C164D 0%, #190B22 100%);
 }
 /*--------------------header styling------------------------*/
@@ -223,18 +225,10 @@ main{
 /**************************hidden section************************/
 section{
     margin-top: -70.3rem;
+    padding: 5rem;
     position: absolute;
     width: 100%;
-    height: 70.3rem; 
     background: linear-gradient(90deg, #0C164D 0%, #190B22 100%);
-    background-image:
-    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 10px),
-    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 15px),
-    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 15px),
-    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 10px);
-    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
-    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
-    background-color: #0C164D;
 }
 
 .section__planet{
@@ -242,7 +236,6 @@ section{
     height: 79.875rem;
     border-radius: 50%;
     background: #428ED4;
-    box-shadow: 0 0 0 2rem rgba(66, 142, 212, 0.1),2rem 0 0 2rem rgba(66, 142, 212, 0.06);
     margin-top: -11rem;
     margin-left: -70rem;
     position: relative;
@@ -292,6 +285,7 @@ section h3{
     font-weight: 400;
     line-height: 100%; /* 1.125rem */
     letter-spacing: 0.10125rem; 
+    padding-bottom: 0.3rem;
 }
 
 section p{
@@ -301,6 +295,7 @@ section p{
     font-style: normal;
     font-weight: 300;
     line-height: 170%;
+    padding-bottom: 2rem;
 }
 
 .section__infoContainer{
@@ -308,7 +303,6 @@ section p{
     justify-content: space-between;
     padding-top: 2rem;
     border-bottom: .5px rgba(255, 255, 255, 0.493) solid;
-    padding-bottom: 2rem;
     width: 80%;
 }
 
@@ -330,4 +324,33 @@ section p{
     text-align: center;
     margin-right: 10rem;
     font-size: 12px;
+}
+
+.star{
+    position: absolute;
+    border-radius: 50%;
+    margin-left: 13rem;
+    background-color: white;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5);
+    animation: blink 5s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0.1; }
+  }
+
+
+@media (min-width: 1921px) {
+
+    main{
+        padding-top: 13rem;
+    }
+
+    section{
+        
+        padding-top: 15rem;
+        margin-top: -87.3rem;
+        padding-bottom: 17rem;
+        overflow: hidden;
+    }
 }

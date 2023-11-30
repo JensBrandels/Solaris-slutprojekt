@@ -102,11 +102,34 @@ function showSection() {
     //Show the hidden section with flex
     document.getElementById('clickBack').style.display = 'flex'
     document.getElementById('clickBack').style.transition = 'opacity 1s';
-    
+    createStars()
     setTimeout(function() {
         getBack.style.opacity = '1'
     }, 100)
 }
+
+////////////////////////////////making star background///////////////////////////////////
+
+//function to get stars on background
+function createStars(numberOfStars) {
+    const section = document.querySelector('section');
+    
+    for(let i = 0; i < numberOfStars; i++) {
+        const star = document.createElement('div');
+        star.className = 'star' //create classname for all the divs
+        star.style.left = Math.random() * 100 + '%';
+        star.style.top = Math.random() * 100 + '%';
+        star.style.width = Math.random() * 6 + 'px';
+
+        star.style.animationDelay = Math.random() * 20 + 's';
+        star.style.height = star.style.width; //make it as big as width to make them round later
+        star.style.opacity = Math.random();
+        
+        section.appendChild(star);
+    }
+}
+
+createStars(100); //create 100 stars
 
 ////////////////////////////////////Eventlisteners///////////////////////////////////////
 

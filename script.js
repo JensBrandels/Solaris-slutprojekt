@@ -1,4 +1,4 @@
-//Här hade jag pseudokod, men jag insåg ganska snart att jag frångått vad jag skrivit från början så jag tog bort pseudokoden då den inte är relevant alls. Så här har jag något att träna mer på!
+//min pseudokod finns i readme-filen! 
 
 //DOM Button variables
 const getBack = document.getElementById('clickBack')
@@ -81,11 +81,11 @@ function printData(data, index){
 ////////////////////////////////////hide infosections//////////////////////////////////
 
 //Hide section with transition instantly at start
-function hideSectionFast() {
+function hideSectionOnLoad() {
     document.getElementById('clickBack').style.display = 'none'
     document.getElementById('clickBack').style.opacity = '0';
 }
-hideSectionFast()
+hideSectionOnLoad()
 
 //hide section slow when clicking it after having clicked on planets to get info
 function hideSectionSlow() {

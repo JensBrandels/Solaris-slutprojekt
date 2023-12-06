@@ -4,7 +4,7 @@ Jens Brandels Solaris Slutprojekt
 
 https://jensbrandels.github.io/Solaris-slutprojekt/ här är min pages :)
 
-//////////////////DESIGNAD FÖR 1920x1080p////////////////////////
+//////////////////DESIGNAD FÖR 2560x1440p////////////////////////
 
 
 ///////////////VARFÖR JAG GJORT SOM JAG GJORT/////////////////
